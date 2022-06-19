@@ -29,7 +29,9 @@ import io.newgrounds.NG;
 import flixel.util.FlxGradient;
 import lime.app.Application;
 import openfl.Assets;
+#if newgrounds
 import flixel.addons.transition.FlxTransitionSprite.TransitionStatus;
+#end
 import ui.*;
 using StringTools;
 
@@ -56,12 +58,6 @@ class TitleState extends MusicBeatState
 
 		super.create();
 
-		/*NGio.noLogin(APIStuff.API);
-
-		#if ng
-		var ng:NGio = new NGio(APIStuff.API, APIStuff.EncKey);
-		trace('NEWGROUNDS LOL');
-		#end*/
 
 		#if FREEPLAY
 		FlxG.switchState(new FreeplayState());
